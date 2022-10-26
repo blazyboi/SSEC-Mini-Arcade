@@ -21,6 +21,8 @@ var foodY;
 
 var gameOver = false;
 
+let SCORE = 0;
+
 window.onload = function() {
     board = document.getElementById("board");
     board.height = rows * blockSize;
@@ -47,6 +49,7 @@ function update() {
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
         placeFood();
+        setScore(SCORE + 1);
     }
 
     for (let i = snakeBody.length-1; i > 0; i--) {
@@ -103,3 +106,8 @@ function placeFood() {
     foodX = Math.floor(Math.random() * cols) * blockSize;
     foodY = Math.floor(Math.random() * rows) * blockSize;
 }
+
+const setScore = (newScore) => {
+    SCORE = newScore;
+    document.querySelector(".score h1").innerText = newScore;
+  }
