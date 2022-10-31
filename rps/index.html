@@ -17,9 +17,13 @@
               <img src='./assets/title.png' />
           </div>
           <div class="score">
-              <p>SCORE</p>
+              <p>Your SCORE</p>
               <h1> 0 </h1>
           </div>
+          <div class="botscore">
+            <p>Bot SCORE</p>
+            <h1> 0 </h1>
+        </div>
       </div>
       <div class="hands">
             <div class="hand paper">
@@ -41,7 +45,7 @@
         </div>
         <div class="referee"> 
             <div class="decision"><h1> YOU WIN! </h1></div>
-            <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+            <div class="newGame" onclick="continueGame()">PLAY AGAIN</div>
         </div>
         <div class="computerhand">
             <h1>THE HOUSE PICKED</h1>
@@ -50,6 +54,10 @@
             </div>   
         </div>       
       </div>        
+    </div>
+    <div class="winning-message" id="winningMessage">
+      <div data-winning-message-text></div>
+      <button id="restartButton" onclick="window.location.reload()">Restart</button>
     </div>
     <script src="./index.js"></script>
   </body>
