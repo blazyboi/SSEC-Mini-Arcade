@@ -78,7 +78,7 @@ const referee = (userHand, cpHand) => {
 };
 
 const continueGame = () => {
-  if(SCORE != 3 && BOTSCORE != 3)
+  if(SCORE != 5 && BOTSCORE != 5)
   {
     let contest = document.querySelector(".contest");
     contest.style.display = "none";
