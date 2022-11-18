@@ -86,17 +86,6 @@ const continueGame = () => {
     let hands = document.querySelector(".hands");
     hands.style.display = "flex";
   }
-  else{
-    if (SCORE >= 5)
-    {
-      winningMessageTextElement.innerText = `You Win! You get a souvenir!`
-    }
-    else if (BOTSCORE >= 5)
-    {
-      winningMessageTextElement.innerText = `Better Luck Next Time!`
-    }
-    winningMessageElement.classList.add('show')
-  }
 }
 
 /*function restartGame() {
@@ -118,9 +107,22 @@ const setDecision = (decision) => {
 const setScore = (newScore) => {
   SCORE = newScore;
   document.querySelector(".score h1").innerText = newScore;
+  if (SCORE == 5)
+  {
+    winningMessageTextElement.innerText = `You Win! You get a souvenir!`
+    winningMessageElement.classList.add('show')
+  }
 }
 
 const setBotScore = (newScore) => {
   BOTSCORE = newScore;
   document.querySelector(".botscore h1").innerText = newScore;
+  if (BOTSCORE == 5)
+  {
+    winningMessageTextElement.innerText = `Better Luck Next Time!`
+    winningMessageElement.classList.add('show')
+  }
 }
+
+
+
