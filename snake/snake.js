@@ -70,13 +70,13 @@ function update() {
     //game over conditions
     if (snakeX < 0 || snakeX > cols*blockSize -1 || snakeY < 0 || snakeY > rows*blockSize -1) {
         gameOver = true;
-        alert("Game Over");
+        alert("Game Over, your score is " + snakeBody.length);
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
-            alert("Game Over");
+            alert("Game Over, your score is " + snakeBody.length);
         }
     }
 }
