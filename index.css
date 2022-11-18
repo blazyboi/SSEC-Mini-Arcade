@@ -5,6 +5,9 @@ body{
   background-image: url(./img/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Global */
@@ -87,7 +90,7 @@ header a:hover{
 /* Footer */
 footer{
   padding:20px;
-  margin-top:20px;
+  margin-top:auto;
   color:#ffffff;
   text-align: center;
 }
